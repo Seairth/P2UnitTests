@@ -14,7 +14,7 @@ _test	rdlong	d, ptra++
 
 	setcz	cz wc, wz
 
-	cmpsx	d, s wc, wz	' TEST INSTRUCTION
+	cmpx	d, s wc, wz	' TEST INSTRUCTION
 
 	setbc	cz, #1		' store C/Z
 	setbz	cz, #0
