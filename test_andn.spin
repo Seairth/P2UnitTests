@@ -38,7 +38,7 @@ _next
 end	jmp	#end
 
 
-testc	long	3
+testc	long	(cnt-tests)/5
 	'       d           s            cz  r           rcz
 tests	long	$F731_125A, $FFFF_FFFA, %00, $0000_0000, %01
 	long	$F731_125A, $FFFF_FFF8, %00, $0000_0002, %10

@@ -45,7 +45,7 @@ tests	long	$BADD_ECAF, $8000_0000, %00, $0000_001F, %00
 	long	$BADD_ECAF, $FFFF_0000, %00, $0000_0010, %00
 	long	$BADD_ECAF, $FFFF_8000, %00, $0000_000F, %00
 	long	$BADD_ECAF, $FFFF_FFFF, %00, $0000_0000, %01
-	long	$BADD_ECAF, $0000_0000, %00, $0000_0000, %11
+	long	$BADD_ECAF, $0000_0000, %00, $0000_001F, %10
 
 cnt	res	1
 d	res	1

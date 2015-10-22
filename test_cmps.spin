@@ -38,7 +38,7 @@ _next
 end	jmp	#end
 
 
-testc	long	10
+testc	long	(cnt-tests)/5
 	'       d           s            cz  r           rcz
 tests	long	$0000_0003, $0000_0002, %00, $0000_0003, %00
 	long	$0000_0003, $0000_0003, %00, $0000_0003, %01
