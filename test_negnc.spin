@@ -40,16 +40,16 @@ end	jmp	#end
 testc	long	(cnt-tests)/5
 
 	'       d           s            cz  r           rcz
-tests	long	$BADD_ECAF, $FFFF_FFFF, %00, $0000_0001, %10
-	long	$BADD_ECAF, $FFFF_FFFF, %10, $FFFF_FFFF, %10
+tests	long	$BADD_ECAF, $FFFF_FFFF, %01, $0000_0001, %00
+	long	$BADD_ECAF, $FFFF_FFFF, %11, $FFFF_FFFF, %10
 	long	$BADD_ECAF, $0000_0000, %00, $0000_0000, %01
-	long	$BADD_ECAF, $0000_0001, %00, $FFFF_FFFF, %00
-	long	$BADD_ECAF, $0000_0001, %10, $0000_0001, %00
-	long	$BADD_ECAF, $7FFF_FFFF, %00, $8000_0001, %00
-	long	$BADD_ECAF, $7FFF_FFFF, %10, $7FFF_FFFF, %00
-	long	$BADD_ECAF, $8000_0000, %00, $8000_0000, %10
-	long	$BADD_ECAF, $8000_0001, %00, $7FFF_FFFF, %10
-	long	$BADD_ECAF, $8000_0001, %10, $8000_0001, %10
+	long	$BADD_ECAF, $0000_0001, %01, $FFFF_FFFF, %10
+	long	$BADD_ECAF, $0000_0001, %11, $0000_0001, %00
+	long	$BADD_ECAF, $7FFF_FFFF, %01, $8000_0001, %10
+	long	$BADD_ECAF, $7FFF_FFFF, %11, $7FFF_FFFF, %00
+	long	$BADD_ECAF, $8000_0000, %01, $8000_0000, %10
+	long	$BADD_ECAF, $8000_0001, %01, $7FFF_FFFF, %00
+	long	$BADD_ECAF, $8000_0001, %11, $8000_0001, %10
 
 cnt	res	1
 d	res	1

@@ -42,13 +42,16 @@ testc	long	(cnt-tests)/5
 	'       d           s            cz  r           rcz
 tests	long	$FFFF_FF9C, $0000_0001, %00, $FFFF_FFCE, %00
 	long	$FFFF_FF9C, $0000_0002, %00, $FFFF_FFE7, %00
-	long	$FFFF_FF9C, $0000_0003, %00, $FFFF_FFF3, %00
-	long	$FFFF_FF93, $0000_0001, %00, $FFFF_FFF9, %10
+	long	$FFFF_FF9C, $0000_0003, %00, $FFFF_FFF3, %10
+	long	$FFFF_FFF3, $0000_0001, %00, $FFFF_FFF9, %10
 	long	$FFFF_FFF9, $0000_0001, %00, $FFFF_FFFC, %10
-	long	$FFFF_FF9C, $0000_0001, %00, $FFFF_FFFE, %00
+	long	$FFFF_FFFC, $0000_0001, %00, $FFFF_FFFE, %00
 	long	$0000_0006, $0000_0001, %00, $0000_0003, %00
-	long	$0000_0006, $0000_0002, %00, $0000_0001, %00
-	long	$0000_0006, $0000_0003, %00, $0000_0000, %01
+	long	$0000_0006, $0000_0002, %00, $0000_0001, %10
+	long	$0000_0006, $0000_0003, %00, $0000_0000, %11
+	long	$0000_0006, $0000_0000, %00, $0000_0006, %00
+	long	$FFFF_FFFC, $0000_0000, %00, $FFFF_FFFC, %00
+	long	$FFFF_FFFC, $FFFF_FFE1, %00, $FFFF_FFFE, %00
 
 cnt	res	1
 d	res	1
