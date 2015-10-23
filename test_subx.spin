@@ -14,7 +14,7 @@ _test	rdlong	d, ptra++
 
 	setcz	cz wc, wz
 
-	subsx	d, s wc, wz	' TEST INSTRUCTION
+	subx	d, s wc, wz	' TEST INSTRUCTION
 
 	setbc	cz, #1		' store C/Z
 	setbz	cz, #0
@@ -42,14 +42,7 @@ testc	long	(cnt-tests)/5
 	'       d           s            cz  r           rcz
 tests	long	$0000_0001, $0000_0001, %00, $0000_0000, %00
 	long	$0000_0001, $0000_0001, %01, $0000_0000, %01
-	long	$0000_0001, $0000_0001, %11, $FFFF_FFFF, %00
-	long	$FFFF_FFFF, $FFFF_FFFF, %00, $0000_0000, %00
-	long	$FFFF_FFFF, $FFFF_FFFF, %01, $0000_0000, %01
-	long	$FFFF_FFFF, $FFFF_FFFF, %11, $FFFF_FFFF, %00
-	long	$8000_0001, $0000_0001, %01, $8000_0000, %00
-	long	$8000_0001, $0000_0001, %11, $7FFF_FFFF, %10
-	long	$7FFF_FFFF, $FFFF_FFFF, %01, $8000_0000, %10
-	long	$7FFF_FFFF, $FFFF_FFFF, %11, $7FFF_FFFF, %00
+	long	$0000_0001, $0000_0001, %11, $FFFF_FFFF, %10
 
 cnt	res	1
 d	res	1
