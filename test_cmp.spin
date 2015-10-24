@@ -40,14 +40,15 @@ end	jmp	#end
 
 testc	long	(cnt-tests)/5
 	'       d           s            cz  r           rcz
-tests	long	$0000_0003, $0000_0002, %00, $0000_0003, %00
-	long	$0000_0003, $0000_0003, %00, $0000_0003, %01
-	long	$0000_0003, $0000_0004, %00, $0000_0003, %10
-	long	$8000_0000, $7FFF_FFFF, %00, $8000_0000, %00
-	long	$7FFF_FFFF, $8000_0000, %00, $7FFF_FFFF, %10
-	long	$FFFF_FFFE, $FFFF_FFFF, %00, $FFFF_FFFE, %10
-	long	$FFFF_FFFE, $FFFF_FFFE, %00, $FFFF_FFFE, %01
-	long	$FFFF_FFFE, $FFFF_FFFD, %00, $FFFF_FFFE, %00
+tests	long	$0000_0003, $0000_0002, %11, $0000_0003, %00 ' same as CMPM
+	long	$0000_0003, $0000_0003, %10, $0000_0003, %01 ' same as CMPM
+	long	$0000_0003, $0000_0004, %01, $0000_0003, %10 ' same as CMPM
+	long	$8000_0000, $7FFF_FFFF, %11, $8000_0000, %00 ' same as CMPM
+	long	$7FFF_FFFF, $8000_0000, %01, $7FFF_FFFF, %10 ' same as CMPM
+	long	$FFFF_FFFE, $FFFF_FFFF, %01, $FFFF_FFFE, %10 ' same as CMPM
+	long	$FFFF_FFFE, $FFFF_FFFE, %10, $FFFF_FFFE, %01 ' same as CMPM
+	long	$FFFF_FFFE, $FFFF_FFFD, %11, $FFFF_FFFE, %00 ' same as CMPM
+	long	$FFFF_FFFF, $7FFF_FFFF, %01, $FFFF_FFFF, %00 ' different than CMPM
 
 cnt	res	1
 d	res	1
